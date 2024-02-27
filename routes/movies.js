@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { celebrate, Segments } = require('celebrate');
-const { getAllMovies, createNewMovie, deleteMovieById } = require('../controllers/movies');
+const { getAllMovies, createNewMovie, deleteMovieById } = require('../controllers/product');
 const { newMovieValid, movieIdValid } = require('../utils/validationopt');
 
 router.get('', getAllMovies);

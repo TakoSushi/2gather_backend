@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { celebrate, Segments } = require('celebrate');
-const { getUserInfo, changeUserInfo } = require('../controllers/users');
+const { getUserInfo, changeUserInfo } = require('../controllers/user');
 const { userInfoValid } = require('../utils/validationopt');
 
 router.get('/me', getUserInfo);

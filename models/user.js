@@ -16,10 +16,27 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Поле "email" должно быть заполнено.'],
     validate: [isEmail, 'Некоректный "email"'],
   },
+  phone_number: {
+    type: String,
+  },
   password: {
     type: String,
     required: [true, 'Поле "password" должно быть заполнено'],
     select: false,
+  },
+  famaly_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Famaly',
+  },
+  admin: {
+    type: Boolean,
+    default: false,
+  },
+  date_birth: {
+    type: Date,
+  },
+  user_status: {
+    type: String,
   },
 }, { versionKey: false });
 

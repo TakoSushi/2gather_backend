@@ -16,7 +16,7 @@ const createUser = (req, res, next) => {
     .catch(next);
 };
 
-const signin = (req, res, next) => {
+const signIn = (req, res, next) => {
   const { email, password } = req.body;
 
   return User.findUserByCredentials(email, password)
@@ -40,7 +40,7 @@ const signin = (req, res, next) => {
     .catch(next);
 };
 
-const signout = (req, res) => {
+const signOut = (req, res) => {
   res
     .clearCookie('jwt')
     .status(200)
@@ -70,6 +70,6 @@ module.exports = {
   getUserInfo,
   changeUserInfo,
   createUser,
-  signin,
-  signout,
+  signIn,
+  signOut,
 };

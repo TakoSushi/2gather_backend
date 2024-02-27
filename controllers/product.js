@@ -1,4 +1,4 @@
-const Movie = require('../models/movie');
+const Movie = require('../models/product');
 const NotFoundError = require('../errors/not-found-err');
 const ForbiddenError = require('../errors/forbidden-err');
 const { filmNotFound, filmDeleted, noPermission } = require('../utils/constants');

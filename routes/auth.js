@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { celebrate, Segments } = require('celebrate');
-const { createUser, signin, signout } = require('../controllers/users');
+const { createUser, signIn, signOut } = require('../controllers/user');
 const { signupValid, signinValid } = require('../utils/validationopt');
 
 router.post('/signup', celebrate({
@@ -9,8 +9,8 @@ router.post('/signup', celebrate({
 
 router.post('/signin', celebrate({
   [Segments.BODY]: signinValid,
-}), signin);
+}), signIn);
 
-router.post('/signout', signout);
+router.post('/signout', signOut);
 
 module.exports = router;

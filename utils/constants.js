@@ -8,7 +8,7 @@ const limiterConfig = {
 
 // Adress
 const serverPort = 8080;
-const dbAddress = 'mongodb://127.0.0.1:27017/bitfilmsdb';
+const dbAddress = 'mongodb://127.0.0.1:27017/2gatherDB';
 
 // Message request and errors
 const successAuth = 'Авторизация прошла успешно';

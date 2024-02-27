@@ -19,10 +19,6 @@ mongoose.connect(DB_URL)
 
 const app = express();
 
-// app.use(cors({
-//   origin: 'https://kuzora-movies.nomoredomains.sbs',
-//   credentials: true,
-// }));
 app.use(cors({
   origin: 'http://localhost:3000',
   credentials: true,
